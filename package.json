@@ -8,7 +8,7 @@
     "test": "ava",
     "prepublishOnly": "npm run lint && npm test",
     "prepare":"npm run build",
-    "build": "tsc",
+    "build": "tsc --project ./tsconfig.json",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "author": "Shun Kashiwa",
