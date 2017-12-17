@@ -67,7 +67,7 @@ export class Gnews {
   ) {
     this.defaultParams = defaultParams;
   }
-  public headlines(topic: string, extraParams: any = {}) {
+  public headlines(topic?: string, extraParams: any = {}) {
     let url;
     if (topic) {
       url = `${this.base}/headlines/section/topic/${topic}`;
