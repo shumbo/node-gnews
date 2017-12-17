@@ -1,0 +1,33 @@
+{
+  "name": "node-gnews",
+  "version": "1.0.0",
+  "description": "A simple node module that loads articles from Google News",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "ava",
+    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "author": "Shun Kashiwa",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "nock": "^9.1.4",
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.6",
+    "@types/html-entities": "^1.2.16",
+    "@types/node": "^8.5.1",
+    "@types/xml2js": "^0.4.2",
+    "axios": "^0.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "html-entities": "^1.2.1",
+    "striptags": "^3.1.1",
+    "xml2js": "^0.4.19"
+  }
+}
