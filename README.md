@@ -1,5 +1,7 @@
 # node-gnews
 
+[![Build Status](https://travis-ci.org/shumbo/node-gnews.svg?branch=master)](https://travis-ci.org/shumbo/node-gnews)
+
 > A simple node module that loads articles from Google News
 
 ## Overview
