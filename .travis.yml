@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+install:
+- npm install
+script:
+- npm run lint
+- npm test
+deploy:
+  provider: npm
+  email: "shun.kashiwa@live.jp"
+  api_key:
+    secure: Xa9iEM5A7dPNkIMAOMhBkAKXmUasQyOTojXtKFL7wBYn81AYtPIlciY0bqRRdz9GB01zs7JA2EPZU7n0bgX0gB9fCLubxIysuLB0jXMvJ2OgBvSuZ/auT4F8dUV4OVREV7wj6GaG1HdeuDQPJpJ/UUP31V/nkTsTSKRoMysQhtfR0t2Q5EexS6OqNzK2igCrJLPlr5zVew2gUtHEZ82cn5KxWA+KtbSd6OXH17VcpKYaPZ7rKt+3ei4J/bTJntTX2POAHtiExW42YKsAv5voezs4xEiMARLhCHDJL0yZxAFNknC4JwH3EY3W96x00wPS6YUCHbE/Sz/zW7ZAJ3gnYK4ipPaI13xq1RAGLED6TcSbkIuw8mIMVYJeIjFy3K99pB/n1wC2GNbupGMNBUMLHBki38WLVjuds2CR1PqPNI23H2PaPtEfrTqaQYty8lMrZkgrBYyrSPg4BRkI9fLvmvgc0St+Cj9kCCcM7+0NBbm1QmtakBfg7zQruJBfqVHi/XiCOU8FoNoFJcgnKaC9pc4QYuLYk9YRB38lLdK8OePm+4pEiXPrxgeCh8LVhH1zM+zLScvlaULfWPgpPRzOnZsnYtfwOhNzfxsJGaR12789sBCBsrrdpZTn+DD+T251lsFmKIiVeVKa+scnVT/ccQmgDOApQjFyBrWUx2+pn78=
+  on:
+    tags: true
