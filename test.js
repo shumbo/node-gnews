@@ -26,7 +26,29 @@ test('Load headlines and returns formatted articles', async t => {
     publisher: 'CNN',
     thumbnailUrl:
       'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSStFGoURvbhN2B3uOAMfecR8xA8VPQZeqYVHQU1fet9AuOyvWOAv4qMamS5o94sC7mtt87J6Y6QOw',
-    fullCoverage: 'https://news.google.com/story/dlsXxqrSy2rUJaMH0ymTb3ve8h_JM?hl=en&ned=us'
+    fullCoverage:
+      'https://news.google.com/story/dlsXxqrSy2rUJaMH0ymTb3ve8h_JM?hl=en&ned=us',
+    related: [
+      {
+        title:
+          'Australian Tried to Sell Missile Parts for North Korea, Police Say',
+        link:
+          'https://www.nytimes.com/2017/12/17/world/australia/australia-north-korea-missile-arrest.html',
+        publisher: 'New York Times'
+      },
+      {
+        title: "Sydney man charged with being 'economic agent' for North Korea",
+        link:
+          'http://www.bbc.com/news/world-australia-42382399',
+        publisher: 'BBC News'
+      },
+      {
+        title: 'AFP charge Sydney man over North Korea weapons brokering',
+        link:
+          'https://www.dailytelegraph.com.au/news/nsw/afp-charge-sydney-man-over-north-korea-brokering/news-story/a9f7f67855fbdbc28bb0ab01aca7a710',
+        publisher: 'Daily Telegraph'
+      }
+    ]
   };
 
   const scope = nock(link)
@@ -60,7 +82,23 @@ test('load search results', async t => {
     publisher: 'Forbes',
     thumbnailUrl:
       'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWE57yJAuPHskDGwgSGKoUp7QfIbwh5ek8UUwUrGeMLLyXxtHjWJLTHjN_9-A5eDf2AvBS6xHsnQ',
-    fullCoverage: 'https://news.google.com/story/dFB9tmCh7NpJnbMrO5E2ANrVmC9PM?hl=en&ned=us'
+    fullCoverage:
+      'https://news.google.com/story/dFB9tmCh7NpJnbMrO5E2ANrVmC9PM?hl=en&ned=us',
+    related: [
+      {
+        title:
+          'What Nintendo Can Teach Us About Exploration in Open World Game Design',
+        link:
+          'https://www.pastemagazine.com/articles/2017/12/what-nintendo-can-teach-us-about-exploration-in-op.html',
+        publisher: 'Paste Magazine'
+      },
+      {
+        title: 'Yooka-Laylee Finally Out On Nintendo Switch',
+        link:
+          'https://cogconnected.com/2017/12/yooka-laylee-finally-nintendo-switch/',
+        publisher: 'COGconnected'
+      }
+    ]
   };
 
   const scope = nock(link)

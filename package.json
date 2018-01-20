@@ -1,6 +1,6 @@
 {
   "name": "node-gnews",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple node module that loads articles from Google News",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "ava",
-    "prepublishOnly": "npm run lint && npm test",
+    "prepublishOnly": "rm -r ./dist && npm run lint && npm test",
     "prepare": "npm run build",
     "build": "tsc --project ./tsconfig.json",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"

@@ -12,7 +12,13 @@ export interface NewsArticle {
   description: string;
   publisher: string;
   fullCoverage: string;
+  related: RelatedArticle[];
   thumbnailUrl: string | null;
+}
+export interface RelatedArticle {
+  title: string;
+  link: string;
+  publisher: string;
 }
 
 const parseXml = (xml: string): any => {
@@ -46,11 +52,30 @@ const formatArticle = (article: any): NewsArticle => {
   const publisher = entities.decode($('font').html() || '');
   const fullCoverage = $('ol > a').attr('href');
 
+  const related: RelatedArticle[] = [];
+  $('ol > li').each((index, element) => {
+    const title = $(element)
+      .find('a')
+      .text();
+    const link = $(element)
+      .find('a')
+      .attr('href');
+    const relatedPublisher = $(element)
+      .find('font')
+      .text();
+    related.push({
+      title,
+      link,
+      publisher: relatedPublisher
+    });
+  });
+
   // Add publisher, re-formatted description, and url
   const formattedArticle = Object.assign(article, {
     description: decodedDescription,
     publisher,
-    fullCoverage
+    fullCoverage,
+    related
   });
 
   // omit imgSrc if empty

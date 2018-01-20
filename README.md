@@ -102,5 +102,5 @@ All the values in the second argument will be used as parameters to load RSS so 
 |description|HTML to guide related articles|[Click to see example](https://gist.github.com/shumbo/4fdc8d41866ccfbb084f444c3e44e11e)|
 |publisher|Publisher of the article|EW.com|
 |fullCoverage|Link to the Google News Related Stories|https://news.google.com/story/dOHKnaQodeaDspMmZOqoGu4YGQ47M?hl=en&ned=us (expired)|
+|related|Array of related stories. Each has title, link and publisher|[Click to see example](https://gist.github.com/shumbo/c8b6f6c7db0ab50995bfc24c1c4146a4)|
 |thumbnailUrl|Thumbnail image url. **Omitted when not available.**|https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzlMagnYwijdaLtdc4MWJopShsC9vRGDh-_LKP9GlJ_ofu6J8OyUFdlebTu4e1JT6mb0_YY7Lw59M|
-
