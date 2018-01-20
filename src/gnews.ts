@@ -11,6 +11,8 @@ export interface NewsArticle {
   pubDate: string;
   description: string;
   publisher: string;
+  fullCoverage: string;
+  thumbnailUrl: string | null;
 }
 
 const parseXml = (xml: string): any => {
@@ -42,11 +44,13 @@ const formatArticle = (article: any): NewsArticle => {
   const $ = cheerio.load(description);
   const thumbnailUrl = $('img', 'tr').attr('src');
   const publisher = entities.decode($('font').html() || '');
+  const fullCoverage = $('ol > a').attr('href');
 
   // Add publisher, re-formatted description, and url
   const formattedArticle = Object.assign(article, {
     description: decodedDescription,
-    publisher
+    publisher,
+    fullCoverage
   });
 
   // omit imgSrc if empty
