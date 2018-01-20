@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - stable
+before_install:
+- npm i -g makeshift && makeshift -r registry.npmjs.org
 install:
 - npm install
 before_script:
@@ -8,3 +10,9 @@ before_script:
 script:
 - npm run lint
 - npm test
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
