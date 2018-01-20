@@ -1,6 +1,6 @@
 {
   "name": "node-gnews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple node module that loads articles from Google News",
   "repository": {
     "type": "git",
