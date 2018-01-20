@@ -10,7 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "ava",
-    "prepublishOnly": "rm -r ./dist && npm run lint && npm test",
+    "prepublishOnly": "npm run lint && npm test",
     "prepare": "npm run build",
     "build": "tsc --project ./tsconfig.json",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"
