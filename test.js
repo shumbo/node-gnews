@@ -24,8 +24,6 @@ test('Load headlines and returns formatted articles', async t => {
     description:
       '<table border="0" cellpadding="2" cellspacing="3"><tr><td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSStFGoURvbhN2B3uOAMfecR8xA8VPQZeqYVHQU1fet9AuOyvWOAv4qMamS5o94sC7mtt87J6Y6QOw" border="1"></td><td><ol style="list-style: none; margin: 0; padding: 0;"><strong><li><a href="http://www.cnn.com/2017/12/16/asia/australia-nkorea-arrest/index.html" target="_blank">Australian police accuse man of acting as North Korean economic agent</a>  <font color="#6f6f6f">CNN</font></li></strong><li><a href="https://www.nytimes.com/2017/12/17/world/australia/australia-north-korea-missile-arrest.html" target="_blank">Australian Tried to Sell Missile Parts for North Korea, Police Say</a>  <font color="#6f6f6f">New York Times</font></li><li><a href="http://www.bbc.com/news/world-australia-42382399" target="_blank">Sydney man charged with being \'economic agent\' for North Korea</a>  <font color="#6f6f6f">BBC News</font></li><li><a href="https://www.dailytelegraph.com.au/news/nsw/afp-charge-sydney-man-over-north-korea-brokering/news-story/a9f7f67855fbdbc28bb0ab01aca7a710" target="_blank">AFP charge Sydney man over North Korea weapons brokering</a>  <font color="#6f6f6f">Daily Telegraph</font></li><a href="https://news.google.com/story/dlsXxqrSy2rUJaMH0ymTb3ve8h_JM?hl=en&ned=us" target="_blank">Full coverage</a></ol></td></tr></table>',
     publisher: 'CNN',
-    thumbnailUrl:
-      'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSStFGoURvbhN2B3uOAMfecR8xA8VPQZeqYVHQU1fet9AuOyvWOAv4qMamS5o94sC7mtt87J6Y6QOw',
     fullCoverage:
       'https://news.google.com/story/dlsXxqrSy2rUJaMH0ymTb3ve8h_JM?hl=en&ned=us',
     related: [
@@ -80,8 +78,6 @@ test('load search results', async t => {
       )
       .replace(/&nbsp;/g, String.fromCharCode(160)), // non-breaking space
     publisher: 'Forbes',
-    thumbnailUrl:
-      'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWE57yJAuPHskDGwgSGKoUp7QfIbwh5ek8UUwUrGeMLLyXxtHjWJLTHjN_9-A5eDf2AvBS6xHsnQ',
     fullCoverage:
       'https://news.google.com/story/dFB9tmCh7NpJnbMrO5E2ANrVmC9PM?hl=en&ned=us',
     related: [
