@@ -50,7 +50,7 @@ const formatArticle = (article: any): NewsArticle => {
   const $ = cheerio.load(description);
   const thumbnailUrl = get(article, '[media:content]["$"]["url"]', null);
   const publisher = entities.decode($('font').html() || '');
-  const fullCoverage = $('ol > a').attr('href');
+  const fullCoverage = $('ol > li > strong > a').attr('href');
 
   const related: RelatedArticle[] = [];
   $('ol > li').each((index, element) => {
