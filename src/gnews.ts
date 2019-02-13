@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { AllHtmlEntities } from 'html-entities';
-import * as striptags from 'striptags';
+import { get } from 'lodash';
 import * as xml2js from 'xml2js';
 
 export interface NewsArticle {
@@ -48,7 +48,7 @@ const formatArticle = (article: any): NewsArticle => {
   const description = article.description;
   const decodedDescription = entities.decode(description);
   const $ = cheerio.load(description);
-  const thumbnailUrl = $('img', 'tr').attr('src');
+  const thumbnailUrl = get(article, '[media:content]["$"]["url"]', null);
   const publisher = entities.decode($('font').html() || '');
   const fullCoverage = $('ol > a').attr('href');
 
