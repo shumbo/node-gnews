@@ -33,7 +33,7 @@ const parseXml = (xml: string): any => {
 };
 
 const flattenArticles = (article: any): any =>
-  Object.entries(article).reduce((previous, [key, value]) => {
+  Object.entries(article).reduce((previous, [key, value]: any[]) => {
     if (key === 'guid') {
       return previous;
     }
